@@ -5,9 +5,15 @@ name: Java CI with Gradle
 
 on:
   push:
+<<<<<<< HEAD
     branches: [ main ]
   pull_request:
     branches: [ main ]
+=======
+    branches: [ feature/2 ]
+  pull_request:
+    branches: [ feature/2 ]
+>>>>>>> f5a0c3586ba5b88d909ffcc5d06f23497c911bb1
 
 jobs:
   build-java:
