@@ -8,7 +8,11 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 0a637a84b78ce361a23e3f8bd414e02025de48f2
 jobs:
   build-java:
 
