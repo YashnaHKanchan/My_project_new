@@ -13,6 +13,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Set up kubectl
+      uses: azure/setup-kubectl@v1
+      with:
+        version: 'v1.21.0'
+
+    - name: Set up K8s context
+      env:
+        KUBECONFIG: ${{ secrets.KUBECONFIG }}
+      run: echo "$KUBECONFIG" > $HOME/.kube/config
+
     - name: Install ArgoCD CLI
       run: |
         curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
